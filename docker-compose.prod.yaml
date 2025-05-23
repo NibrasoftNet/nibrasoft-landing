@@ -5,21 +5,24 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3003:3003"
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.linkbookfrontend.rule=Host(`staging.linkbook.store`)"
-      - "traefik.http.routers.linkbookfrontend.entrypoints=websecure"
-      - "traefik.http.routers.linkbookfrontend.tls=true"
-      - "traefik.http.routers.linkbookfrontend.tls.certresolver=le"
-      - "traefik.http.routers.linkbookfrontend.tls.domains[0].main=staging.linkbook.store"
-      - "traefik.http.middlewares.linkbookfrontend-redirect.redirectscheme.scheme=https"
-      - "traefik.http.routers.linkbookfrontend.middlewares=linkbookfrontend-redirect"
-    networks:
-      - traefikNetwork
     environment:
       NODE_ENV: production
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.nibrasoft-landing.rule=Host(`nibrasoft.com`)"
+      - "traefik.http.routers.nibrasoft-landing.entrypoints=websecure"
+      - "traefik.http.routers.nibrasoft-landing.tls=true"
+      - "traefik.http.routers.nibrasoft-landing.tls.certresolver=le"
+      - "traefik.http.routers.nibrasoft-landing.tls.domains[0].main=nibrasoft.com"
+      - "traefik.http.middlewares.nibrasoft-landing-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.nibrasoft-landing.middlewares=nibrasoft-landing-redirect"
+    networks:
+      - traefikNetwork
+      - nibrasoftNetwork
     volumes:
       - "~/shared_vps/traefik/certs:/letsencrypt"
 networks:
   traefikNetwork:
     external: true
+  nibrasoftNetwork:
+    internal: true
