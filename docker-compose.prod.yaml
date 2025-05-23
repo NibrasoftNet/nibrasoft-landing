@@ -13,7 +13,10 @@ services:
       - "traefik.http.routers.nibrasoft-landing.entrypoints=websecure"
       - "traefik.http.routers.nibrasoft-landing.tls=true"
       - "traefik.http.routers.nibrasoft-landing.tls.certresolver=le"
+      - "traefik.http.routers.nibrasoft-landing.service=nibrasoft-landing"
+      - "traefik.http.services.nibrasoft-landing.loadbalancer.server.port=3003"
       - "traefik.http.routers.nibrasoft-landing.tls.domains[0].main=nibrasoft.com"
+      # HTTPS Redirection Middleware
       - "traefik.http.middlewares.nibrasoft-landing-redirect.redirectscheme.scheme=https"
       - "traefik.http.routers.nibrasoft-landing.middlewares=nibrasoft-landing-redirect"
     networks:
