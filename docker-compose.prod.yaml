@@ -1,0 +1,25 @@
+services:
+  nibrasoft-client:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3003:3003"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.linkbookfrontend.rule=Host(`staging.linkbook.store`)"
+      - "traefik.http.routers.linkbookfrontend.entrypoints=websecure"
+      - "traefik.http.routers.linkbookfrontend.tls=true"
+      - "traefik.http.routers.linkbookfrontend.tls.certresolver=le"
+      - "traefik.http.routers.linkbookfrontend.tls.domains[0].main=staging.linkbook.store"
+      - "traefik.http.middlewares.linkbookfrontend-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.linkbookfrontend.middlewares=linkbookfrontend-redirect"
+    networks:
+      - traefikNetwork
+    environment:
+      NODE_ENV: production
+    volumes:
+      - "~/shared_vps/traefik/certs:/letsencrypt"
+networks:
+  traefikNetwork:
+    external: true

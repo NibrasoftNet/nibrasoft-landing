@@ -1,0 +1,38 @@
+@font-face {
+  font-family: Ubuntu-Regular;
+  src: url("../src/assets/fonts/Ubuntu-Regular.ttf");
+}
+@import 'tailwindcss';
+@import "tw-animate-css";
+
+@theme {
+  --color-primary: #3466F6;
+  --font-ubuntu: Ubuntu-Regular, "sans-serif";
+}
+
+@layer components {
+  .section-landing {
+    @apply flex flex-col items-center w-screen
+  }
+  .section-landing-container {
+    @apply flex w-screen h-full justify-center items-center max-w-[1400px]
+  }
+  .section-landing-title {
+    @apply flex flex-col size-full justify-center items-center
+  }
+  .section-landing-header-1 {
+    @apply text-4xl font-bold font-ubuntu
+  }
+  .section-landing-header-2 {
+    @apply text-4xl font-bold text-primary font-ubuntu
+  }
+  .section-landing-paragraph {
+    @apply max-w-md mt-10 font-ubuntu
+  }
+  .section-landing-grid-1 {
+    @apply max-w-[1400px] w-full grid grid-cols-1 md:grid-cols-2 gap-6 px-4 py-10
+  }
+  .section-landing-grid-text-1 {
+    @apply col-span-1 flex flex-col items-start justify-center
+  }
+}
