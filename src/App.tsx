@@ -7,22 +7,29 @@ import Services from '../components/Services';
 import Insight from '../components/Insight';
 import Cta from '../components/Cta';
 import Footer from '../components/Footer';
+import { Suspense } from 'react';
+import i18next from 'i18next';
+import Loading from '../components/Loading';
 
 function App() {
+  const currentLanguage = i18next.language;
+  console.log('current lang', currentLanguage);
   return (
-    <main className="flex flex-col items-center min-h-screen">
-      <Hero />
-      <Statistics />
-      <WebApplications />
-      <MobileApplications />
-      <AiApplications />
-      <Services />
-      <Insight />
-      <section className="section-landing h-screen">
-        <Cta />
-        <Footer />
-      </section>
-    </main>
+    <Suspense fallback={<Loading />}>
+      <main className="flex flex-col items-center min-h-screen">
+        <Hero />
+        <Statistics />
+        <WebApplications />
+        <MobileApplications />
+        <AiApplications />
+        <Services />
+        <Insight />
+        <section className="section-landing h-screen">
+          <Cta />
+          <Footer />
+        </section>
+      </main>
+    </Suspense>
   );
 }
 

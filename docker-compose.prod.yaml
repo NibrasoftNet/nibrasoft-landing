@@ -9,16 +9,21 @@ services:
       NODE_ENV: production
     labels:
       - "traefik.enable=true"
+
+      # Secure router (HTTPS)
       - "traefik.http.routers.nibrasoft-landing.rule=Host(`nibrasoft.com`)"
       - "traefik.http.routers.nibrasoft-landing.entrypoints=websecure"
       - "traefik.http.routers.nibrasoft-landing.tls=true"
       - "traefik.http.routers.nibrasoft-landing.tls.certresolver=le"
       - "traefik.http.routers.nibrasoft-landing.service=nibrasoft-landing"
       - "traefik.http.services.nibrasoft-landing.loadbalancer.server.port=3003"
-      - "traefik.http.routers.nibrasoft-landing.tls.domains[0].main=nibrasoft.com"
-      # HTTPS Redirection Middleware
+
+      # HTTP -> HTTPS redirect
+      - "traefik.http.routers.nibrasoft-landing-redirect.rule=Host(`nibrasoft.com`)"
+      - "traefik.http.routers.nibrasoft-landing-redirect.entrypoints=web"
+      - "traefik.http.routers.nibrasoft-landing-redirect.middlewares=nibrasoft-landing-redirect@docker"
       - "traefik.http.middlewares.nibrasoft-landing-redirect.redirectscheme.scheme=https"
-      - "traefik.http.routers.nibrasoft-landing.middlewares=nibrasoft-landing-redirect"
+
     networks:
       - traefikNetwork
       - nibrasoftNetwork

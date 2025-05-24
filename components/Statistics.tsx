@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 export type StatisticsType = {
   score: number;
   name: string;
@@ -7,22 +9,24 @@ export type StatisticsType = {
 const statisticList: StatisticsType[] = [
   {
     score: 20,
-    name: 'clients',
+    name: 'stat-clients',
     backgroundColor: 'bg-[#3466F6]',
   },
   {
     score: 10,
-    name: 'mobile applications',
+    name: 'stat-mobile',
     backgroundColor: 'bg-[#26DD88]',
   },
   {
     score: 10,
-    name: 'web applications',
+    name: 'stat-web',
     backgroundColor: 'bg-[#2D3950]',
   },
 ];
 
 const Statistics = () => {
+  const { t } = useTranslation();
+
   return (
     <section
       id="nibras-exp"
@@ -32,12 +36,13 @@ const Statistics = () => {
         <ul className="grid grid-cols-1 md:grid-cols-3 w-full gap-8 items-center p-4">
           {statisticList.map((stat: StatisticsType) => (
             <li
+              dir="ltr"
               key={stat.name}
               className={`text-white flex col-span-1 w-full rounded-xl h-40 ${stat.backgroundColor} flex gap-2 items-center justify-center`}
             >
               <span className="text-5xl font-bold">+{stat.score}</span>
               <span className="font-semibold text-xl capitalize">
-                {stat.name}
+                {t(stat.name)}
               </span>
             </li>
           ))}

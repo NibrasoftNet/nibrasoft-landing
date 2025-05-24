@@ -7,6 +7,8 @@ import {
   SettingsIcon,
 } from 'lucide-react';
 import { type ReactElement, useEffect, useRef, useState } from 'react';
+import LanguageSelector from '../components/LanguageSelector';
+import { useTranslation } from 'react-i18next';
 
 export type NavItemType = {
   name: string;
@@ -16,7 +18,7 @@ export type NavItemType = {
 
 const navLinks: NavItemType[] = [
   {
-    name: 'accueil',
+    name: 'home',
     element: 'nibras-welcome',
     icon: <HomeIcon className="w-6 h-6" />,
   },
@@ -42,6 +44,7 @@ const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [isHeroVisible, setIsHeroVisible] = useState(true);
   const heroRef = useRef<HTMLElement | null>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     // Scroll style change
@@ -103,19 +106,22 @@ const Navbar = () => {
                 className="capitalize hover:underline underline-offset-2 cursor-pointer"
                 onClick={() => scrollToSection(link.element)}
               >
-                {link.name}
+                {t(link.name)}
               </li>
             ))}
           </ul>
-          <button className="hidden md:flex uppercase rounded-full px-4 py-2 border-2 border-primary text-primary">
-            contact
-          </button>
-          <button
-            onClick={() => setOpenMenu((prev) => !prev)}
-            className="md:hidden uppercase rounded-full px-4 py-2 border-2 border-primary text-primary"
-          >
-            <MenuIcon className="w-6 h-6" />
-          </button>
+          <div className="flex gap-4 items-center">
+            <LanguageSelector />
+            <button className="hidden md:flex uppercase w-24 cursor-pointer justify-center items-center rounded-xl px-4 py-2 border-2 border-primary text-primary">
+              {t('contact-btn')}
+            </button>
+            <button
+              onClick={() => setOpenMenu((prev) => !prev)}
+              className="md:hidden uppercase rounded-full px-4 py-2 border-2 border-primary text-primary"
+            >
+              <MenuIcon className="w-6 h-6" />
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -134,7 +140,7 @@ const Navbar = () => {
                 className="flex items-center justify-between gap-4 w-1/2"
               >
                 {link.icon}
-                <span className="capitalize">{link.name}</span>
+                <span className="capitalize">{t(link.name)}</span>
               </button>
             </li>
           ))}
