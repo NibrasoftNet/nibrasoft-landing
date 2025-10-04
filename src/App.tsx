@@ -1,33 +1,27 @@
-import Hero from '../components/Hero';
-import Statistics from '../components/Statistics';
-import WebApplications from '../components/WebApplications';
-import MobileApplications from '../components/MobileApplications';
-import AiApplications from '../components/AiApplications';
-import Services from '../components/Services';
-import Insight from '../components/Insight';
-import Cta from '../components/Cta';
-import Footer from '../components/Footer';
 import { Suspense } from 'react';
 import i18next from 'i18next';
-import Loading from '../components/Loading';
+import Loading from './components/loading';
+import HeroSection from './components/sections/hero-section';
+import ServiceSection from './components/sections/service-section';
+import FeaturesSection from '@/components/sections/features-section';
+import ComparisonSection from '@/components/sections/comparison-section';
+import FeaturesTwoSection from '@/components/sections/features-two-section';
+import OurTeamSection from '@/components/sections/our-team-section';
+import FooterSection from './components/sections/footer-section';
 
 function App() {
   const currentLanguage = i18next.language;
   console.log('current lang', currentLanguage);
   return (
     <Suspense fallback={<Loading />}>
-      <main className="flex flex-col items-center min-h-screen">
-        <Hero />
-        <Statistics />
-        <WebApplications />
-        <MobileApplications />
-        <AiApplications />
-        <Services />
-        <Insight />
-        <section className="section-landing h-screen">
-          <Cta />
-          <Footer />
-        </section>
+      <main className="flex flex-col items-center min-h-screen w-screen overflow-x-hidden">
+        <HeroSection />
+        <ServiceSection />
+        <FeaturesSection />
+        <ComparisonSection />
+        <FeaturesTwoSection />
+        <OurTeamSection />
+        <FooterSection />
       </main>
     </Suspense>
   );

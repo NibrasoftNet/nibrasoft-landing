@@ -3,9 +3,12 @@
   "experience": "experience",
   "services": "services",
   "insights": "insights",
-  "contact-btn": "contact",
-  "hero-title-1": "Build the Future with modern",
-  "hero-title-2": "Web, Mobile & AI Solutions",
+  "contact-btn": "Ask me",
+  "hero-title-1": "Awaken",
+  "hero-sub-title-1": "your ideas,",
+  "hero-title-2": "Impulse",
+  "hero-sub-title-2": "the future with",
+  "hero-title-3": "Smart solutions",
   "hero-paragraph": "We craft powerful, scalable, and intelligent digital products that turn your ideas into real-world impact. From startup MVPs to enterprise platforms—launch faster, smarter, and better.",
   "stat-clients": "clients",
   "stat-mobile": "mobile applications",
@@ -16,9 +19,11 @@
   "mobile-title-1": "Seamless Mobile Experiences for,",
   "mobile-title-2": "iOS & Android,",
   "mobile-paragraph": "From idea to app store, we create beautiful, user-friendly mobile applications that engage users and elevate your brand. Native and cross-platform solutions, optimized for performance.",
-  "ai-title-1": "Intelligent AI Solutions that,",
-  "ai-title-2": "Drive Results,",
-  "ai-paragraph": "Leverage cutting-edge artificial intelligence to automate workflows, personalize experiences, and unlock new revenue streams. We build smart tools that make your products smarter.",
+  "feature-title": "Intelligent Solutions that,",
+  "feature-sub-title": "Drive Results,",
+  "linkbook-description": "Leverage cutting-edge artificial intelligence to automate workflows, personalize experiences, and unlock new revenue streams. We build smart tools that make your products smarter.",
+  "tachkila-description": "Leverage cutting-edge artificial intelligence to automate workflows, personalize experiences, and unlock new revenue streams. We build smart tools that make your products smarter.",
+  "moorish-description": "Leverage cutting-edge artificial intelligence to automate workflows, personalize experiences, and unlock new revenue streams. We build smart tools that make your products smarter.",
   "service-title-1": "Services",
   "service-paragraph": "We offer end-to-end services that bring your vision to life—designed to delight, built to last, and maintained for scale.",
   "service-design": "Services",
@@ -27,14 +32,102 @@
   "service-dev-paragraph": "Our developers build scalable and secure applications using the latest technologies.",
   "service-deploy": "Deployment/Maintenance",
   "service-deploy-paragraph": "We handle infrastructure, CI/CD, monitoring, and updates—so your app stays fast, secure, and available.",
+  "insight-inspiration": "Inspiration",
   "insight-title-1": "Your Tech Partner for,",
   "insight-title-2": "Long-Term Growth,",
   "insight-paragraph": "We don’t just build apps—we help grow businesses. Through strategic consultation, iterative development, and performance optimization, we ensure your product evolves with your vision.",
-  "cta-title-1": "Your feedback is important,",
+  "insight-us": "Us",
+  "insight-others": "Others",
+  "services-section": {
+    "title": {
+      "line1": "Your partners for",
+      "line2": "Digital success"
+    },
+    "description": "We design powerful, scalable, and intelligent digital products that turn your ideas into real impact. From startup MVPs to enterprise platforms — launch faster, smarter, and better.",
+    "cards": {
+      "webdesign": {
+        "title": "Web Design Agency",
+        "description": "As a leading web design and digital agency, we ensure your website stands out and performs like no other."
+      },
+      "appdev": {
+        "title": "Web & Mobile App Development",
+        "description": "We create high-performance web and mobile apps that meet your users' needs and drive business growth."
+      },
+      "marketing": {
+        "title": "Digital Marketing",
+        "description": "We craft data-driven marketing strategies to boost your online presence and deliver measurable growth."
+      },
+      "ai": {
+        "line1": "Artificial",
+        "line2": "Intelligence",
+        "line3": "(AI)"
+      }
+    }
+  },
+  "features": {
+    "accuratePricing": "Accurate Pricing",
+    "highEndSolutions": "High-End Solutions",
+    "multidisciplineTeam": "Multidiscipline Team",
+    "longTermSupport": "Long-Term Support",
+    "customizedStrategies": "Customized Strategies",
+    "transparentCommunication": "Transparent Communication",
+    "scalableSolutions": "Scalable Solutions",
+    "innovationRD": "Innovation & R&D"
+  },
+  "featuresTwo": {
+    "title": "Creative Development",
+    "uiux": {
+      "title": "UI/UX Design",
+      "description": "We craft intuitive and modern interfaces to create engaging user experiences."
+    },
+    "webdev": {
+      "title": "Web Development",
+      "description": "We build fast, scalable, and secure web applications using modern technologies."
+    },
+    "mobiledev": {
+      "title": "Mobile Development",
+      "description": "We create high-performance mobile apps for iOS and Android, tailored to your needs."
+    },
+    "infrastructure": {
+      "title": "Infrastructure",
+      "description": "We set up reliable cloud and on-premise infrastructures for scalable solutions."
+    },
+    "aiintegration": {
+      "title": "AI Integration",
+      "description": "We integrate intelligent features to automate workflows and boost performance."
+    }
+  },
+  "our-team-title": "Meet Our Team",
+  "our-team-sub-title": "A multidisciplinary team dedicated to your success",
+  "members": {
+    "name-1": "Sofien Abidi",
+    "position-1": "Full Stack JavaScript Developer",
+    "description-1": "Experienced in building end-to-end web and mobile solutions using modern JavaScript frameworks.",
+    "name-2": "Ahmad Chebbi",
+    "position-2": "Full Stack JavaScript Developer",
+    "description-2": "Specializes in modern web technologies and scalable backend systems.",
+    "name-3": "Yahya Laouaib",
+    "position-3": "Data Analyst / Python Developer",
+    "description-3": "Expert in data analysis, visualization, and Python development for data-driven applications.",
+    "name-4": "Rayen Ben Hassine",
+    "position-4": "AI Specialist / Flutter Developer",
+    "description-4": "Combines AI expertise with cross-platform mobile development using Flutter.",
+    "name-5": "Fatma Rekik",
+    "position-5": "Senior UI/UX Designer",
+    "description-5": "Creates intuitive and visually engaging user experiences with a focus on accessibility."
+  },
   "cta-title-2": "Questions",
   "cta-title-3": "Ready to get",
   "cta-title-4": "started?",
   "cta-btn": "Send",
-  "footer-title-1": "Build Something Exceptional Together,",
-  "footer-paragraph": "Ready to bring your vision to life? Contact us today to start your journey toward digital excellence."
+  "footer": {
+    "title": "Let's Talk About Your Next Project",
+    "emailPlaceholder": "email address...",
+    "contact": {
+      "address": "Simply dummy text of the printing and typesetting industry. Lorem Ipsum",
+      "phone": "Simply dummy text of the printing and typesetting industry. Lorem Ipsum",
+      "email": "Simply dummy text of the printing and typesetting industry. Lorem Ipsum"
+    },
+    "copyright": "Copyright © 2025 Nibras. All rights reserved."
+  }
 }

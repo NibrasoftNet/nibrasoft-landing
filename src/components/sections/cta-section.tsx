@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-const Cta = () => {
+const CtaSection = () => {
   const { t } = useTranslation();
 
   return (
@@ -36,4 +36,4 @@ const Cta = () => {
   );
 };
 
-export default Cta;
+export default CtaSection;

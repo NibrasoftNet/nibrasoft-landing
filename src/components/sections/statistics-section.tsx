@@ -24,7 +24,7 @@ const statisticList: StatisticsType[] = [
   },
 ];
 
-const Statistics = () => {
+const StatisticsSection = () => {
   const { t } = useTranslation();
 
   return (
@@ -52,4 +52,4 @@ const Statistics = () => {
   );
 };
 
-export default Statistics;
+export default StatisticsSection;

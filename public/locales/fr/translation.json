@@ -4,8 +4,11 @@
   "services": "Services",
   "insights": "Perspectives",
   "contact-btn": "Contact",
-  "hero-title-1": "Construisez le Futur avec des",
-  "hero-title-2": "Solutions Web, Mobiles & IA",
+  "hero-title-1": "Éveillez-vous",
+  "hero-sub-title-1": "vos idées,",
+  "hero-title-2": "Impulsez",
+  "hero-sub-title-2": "l’avenir avec,",
+  "hero-title-3": "des solutions Intelligentes",
   "hero-paragraph": "Nous concevons des produits numériques puissants, évolutifs et intelligents qui transforment vos idées en impact réel. Des MVP de startups aux plateformes d'entreprise—lancez plus vite, plus intelligemment et mieux.",
   "stat-clients": "clients",
   "stat-mobile": "applications mobiles",
@@ -16,9 +19,11 @@
   "mobile-title-1": "Expériences Mobiles Fluides pour,",
   "mobile-title-2": "iOS & Android,",
   "mobile-paragraph": "De l'idée à l'App Store, nous créons des applications mobiles élégantes et conviviales qui engagent les utilisateurs et renforcent votre marque. Solutions natives et multiplateformes, optimisées pour la performance.",
-  "ai-title-1": "Solutions d'IA Intelligentes qui",
-  "ai-title-2": "Génèrent des Résultats,",
-  "ai-paragraph": "Tirez parti de l'intelligence artificielle de pointe pour automatiser les workflows, personnaliser les expériences et débloquer de nouvelles sources de revenus. Nous créons des outils intelligents qui rendent vos produits plus intelligents.",
+  "feature-title": "Solutions Intelligentes qui",
+  "feature-sub-title": "Génèrent des Résultats,",
+  "linkbook-description": "Tirez parti de l'intelligence artificielle de pointe pour automatiser les workflows, personnaliser les expériences et débloquer de nouvelles sources de revenus. Nous créons des outils intelligents qui rendent vos produits plus intelligents.",
+  "tachkila-description": "Tirez parti de l'intelligence artificielle de pointe pour automatiser les workflows, personnaliser les expériences et débloquer de nouvelles sources de revenus. Nous créons des outils intelligents qui rendent vos produits plus intelligents.",
+  "moorish-description": "Tirez parti de l'intelligence artificielle de pointe pour automatiser les workflows, personnaliser les expériences et débloquer de nouvelles sources de revenus. Nous créons des outils intelligents qui rendent vos produits plus intelligents.",
   "service-title-1": "Services",
   "service-paragraph": "Nous proposons des services clés en main qui donnent vie à votre vision—conçus pour ravir, construits pour durer et maintenus pour évoluer.",
   "service-design": "Conception",
@@ -30,11 +35,101 @@
   "insight-title-1": "Votre Partenaire Technologique pour",
   "insight-title-2": "une Croissance à Long Terme,",
   "insight-paragraph": "Nous ne construisons pas seulement des applications—nous aidons les entreprises à croître. Grâce à une consultation stratégique, un développement itératif et une optimisation des performances, nous veillons à ce que votre produit évolue avec votre vision.",
-  "cta-title-1": "Votre avis est important,",
+  "insight-us": "Nous",
+  "insight-others": "Autres",
+  "services-section": {
+    "title": {
+      "line1": "Vos partenaires pour",
+      "line2": "le succès digital"
+    },
+    "description": "Nous concevons des produits numériques puissants, évolutifs et intelligents qui transforment vos idées en impact réel. Des MVP aux plateformes d'entreprise — lancez-vous plus vite et plus intelligemment.",
+    "cards": {
+      "webdesign": {
+        "title": "Agence de conception Web",
+        "description": "En tant qu'agence de design et numérique, nous créons des sites web uniques et performants."
+      },
+      "appdev": {
+        "title": "Développement Web & Mobile",
+        "description": "Nous créons des applications web et mobiles performantes répondant aux besoins de vos utilisateurs."
+      },
+      "marketing": {
+        "title": "Marketing Digital",
+        "description": "Nous élaborons des stratégies marketing axées sur les données pour accroître votre visibilité en ligne."
+      },
+      "ai": {
+        "line1": "Intelligence",
+        "line2": "Artificielle",
+        "line3": "(IA)"
+      }
+    }
+  },
+  "features": {
+    "accuratePricing": "Tarification précise",
+    "highEndSolutions": "Solutions haut de gamme",
+    "multidisciplineTeam": "Équipe multidisciplinaire",
+    "longTermSupport": "Support à long terme",
+    "customizedStrategies": "Stratégies personnalisées",
+    "transparentCommunication": "Communication transparente",
+    "scalableSolutions": "Solutions évolutives",
+    "innovationRD": "Innovation & R&D"
+  },
+  "featuresTwo": {
+    "title": "Développement Créatif",
+    "uiux": {
+      "title": "Conception UI/UX",
+      "description": "Nous concevons des interfaces modernes et intuitives pour une expérience utilisateur optimale."
+    },
+    "webdev": {
+      "title": "Développement Web",
+      "description": "Nous développons des applications web rapides, évolutives et sécurisées."
+    },
+    "mobiledev": {
+      "title": "Développement Mobile",
+      "description": "Nous créons des applications mobiles performantes pour iOS et Android."
+    },
+    "infrastructure": {
+      "title": "Infrastructure",
+      "description": "Nous mettons en place des infrastructures fiables sur le cloud ou en local."
+    },
+    "aiintegration": {
+      "title": "Intégration IA",
+      "description": "Nous intégrons des fonctionnalités intelligentes pour automatiser et optimiser vos processus."
+    }
+  },
+  "our-team-title": "Rencontrez notre équipe",
+  "our-team-sub-title": "Une équipe pluridisciplinaire dédiée à votre succès",
+  "members": {
+    "name-1": "Sofien Abidi",
+    "position-1": "Développeur JavaScript Full Stack",
+    "description-1": "Expérimenté dans la création de solutions web et mobiles complètes en utilisant des frameworks JavaScript modernes.",
+    "name-2": "Ahmad Chebbi",
+    "position-2": "Développeur JavaScript Full Stack",
+    "description-2": "Spécialisé dans les technologies web modernes et les systèmes backend évolutifs.",
+
+    "name-3": "Yahya Laouaib",
+    "position-3": "Analyste de données / Développeur Python",
+    "description-3": "Expert en analyse et visualisation de données, ainsi qu’en développement Python pour des applications orientées données.",
+
+    "name-4": "Rayen Ben Hassine",
+    "position-4": "Spécialiste IA / Développeur Flutter",
+    "description-4": "Allie expertise en intelligence artificielle et développement mobile multiplateforme avec Flutter.",
+
+    "name-5": "Fatma Rekik",
+    "position-5": "Designer UI/UX Senior",
+    "description-5": "Crée des expériences utilisateurs intuitives et attrayantes visuellement, avec un accent sur l’accessibilité."
+  },
   "cta-title-2": "Des questions ?",
   "cta-title-3": "Prêt à",
   "cta-title-4": "commencer ?",
   "cta-btn": "Envoyer",
-  "footer-title-1": "Construisons Ensemble Quelque Chose d'Exceptionnel,",
-  "footer-paragraph": "Prêt à donner vie à votre vision ? Contactez-nous dès aujourd'hui pour commencer votre voyage vers l'excellence numérique."
+  "footer": {
+    "title": "Parlons de Votre Prochain Projet",
+    "emailPlaceholder": "adresse email...",
+    "contact": {
+      "address": "Texte fictif simple de l'industrie de l'impression et de la composition. Lorem Ipsum",
+      "phone": "Texte fictif simple de l'industrie de l'impression et de la composition. Lorem Ipsum",
+      "email": "Texte fictif simple de l'industrie de l'impression et de la composition. Lorem Ipsum"
+    },
+    "copyright": "Droits d'auteur © 2025 Nibras. Tous droits réservés."
+  }
 }

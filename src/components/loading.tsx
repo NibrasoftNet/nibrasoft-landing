@@ -1,3 +1,5 @@
+import LoadingIcon from "./icons/loading-icon";
+
 const Loading = () => {
   return (
     <div className="w-screen h-screen flex flex-col items-center justify-center gap-4">
@@ -6,7 +8,7 @@ const Loading = () => {
         alt="nibras-logo"
         className="w-72"
       />
-      <span className="text-3xl">Loading...</span>
+      <LoadingIcon />
     </div>
   );
 };
