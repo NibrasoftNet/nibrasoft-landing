@@ -63,7 +63,10 @@ const FeaturesSection = () => {
   const project = featuredProjects[currentIndex];
 
   return (
-    <section className="flex items-center justify-center w-full min-h-screen bg-white">
+    <section
+      id="nibras-exp"
+      className="flex items-center justify-center w-full min-h-screen bg-white"
+    >
       <div className="flex flex-col md:flex-row items-center justify-center max-w-[1400px]">
         {/* Text Section */}
         <div className="flex flex-col w-full items-center md:items-start justify-center gap-4">
@@ -96,8 +99,8 @@ const FeaturesSection = () => {
             <button onClick={prevProject} aria-label="Previous project">
               <CircleArrowUpIcon className="size-12 hover:text-blue-600 transition-colors" />
             </button>
-            <span className="font-bold text-xl">
-              Project&nbsp;{currentIndex + 1}/{featuredProjects.length}
+            <span className="capitalize font-bold text-xl">
+              {t('projects')}&nbsp;{currentIndex + 1}/{featuredProjects.length}
             </span>
             <button onClick={nextProject} aria-label="Next project">
               <CircleArrowDownIcon className="size-12 hover:text-blue-600 transition-colors" />

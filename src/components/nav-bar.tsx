@@ -31,7 +31,7 @@ const navLinks: NavItemType[] = [
   },
   {
     name: 'services',
-    element: 'nibras-services',
+    element: 'nibras-comparison',
     icon: <SettingsIcon className="w-6 h-6" />,
   },
   {

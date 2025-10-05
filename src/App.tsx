@@ -1,8 +1,7 @@
 import { Suspense } from 'react';
 import i18next from 'i18next';
 import Loading from './components/loading';
-import HeroSection from './components/sections/hero-section';
-import ServiceSection from './components/sections/service-section';
+import HeroServiceSection from './components/sections/hero-service-section';
 import FeaturesSection from '@/components/sections/features-section';
 import ComparisonSection from '@/components/sections/comparison-section';
 import FeaturesTwoSection from '@/components/sections/features-two-section';
@@ -15,8 +14,7 @@ function App() {
   return (
     <Suspense fallback={<Loading />}>
       <main className="flex flex-col items-center min-h-screen w-screen overflow-x-hidden">
-        <HeroSection />
-        <ServiceSection />
+        <HeroServiceSection />
         <FeaturesSection />
         <ComparisonSection />
         <FeaturesTwoSection />

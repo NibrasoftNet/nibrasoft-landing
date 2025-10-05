@@ -23,7 +23,10 @@ const FeaturesTwo = () => {
   }, []);
 
   return (
-    <section className="w-screen flex flex-col items-center bg-[#F2F1F6] p-0 md:p-10">
+    <section
+      id="nibras-insights"
+      className="w-screen flex flex-col items-center bg-[#F2F1F6] p-0 md:p-10"
+    >
       <h1 className="text-white font-extrabold text-7xl capitalize">
         {t('hero-title-3')}
       </h1>
