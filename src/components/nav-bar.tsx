@@ -11,6 +11,7 @@ import { type ReactElement, useEffect, useRef, useState } from 'react';
 import LanguageSelector from './language-selector';
 import { useTranslation } from 'react-i18next';
 import BotIcon from './icons/bot-icon';
+import { motion } from 'motion/react';
 
 export type NavItemType = {
   name: string;
@@ -103,13 +104,43 @@ const NavBar = () => {
           />
           <ul className="hidden md:flex flex-1 items-center justify-center gap-10">
             {navLinks.map((link) => (
-              <li
+              <motion.li
                 key={link.name}
-                className="text-white text-lg capitalize hover:underline underline-offset-2 cursor-pointer"
+                className="text-white text-lg capitalize relative cursor-pointer electric-underline"
                 onClick={() => scrollToSection(link.element)}
+                whileHover="hover"
+                initial="initial"
               >
                 {t(link.name)}
-              </li>
+
+                {/* Animated underline */}
+                <motion.div
+                  className="absolute left-0 bottom-[-2px] h-[8px] w-full"
+                  style={{
+                    transformOrigin: 'left',
+                    backgroundImage: `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'><polyline points='0,10 5,0 10,10 15,0 20,10 25,0 30,10 35,0 40,10 45,0 50,10 55,0 60,10 65,0 70,10 75,0 80,10 85,0 90,10 95,0 100,10' fill='none' stroke='%23FFFFFF' stroke-width='2'/></svg>")`,
+                    backgroundRepeat: 'repeat-x',
+                    backgroundSize: '100px 10px',
+                  }}
+                  variants={{
+                    initial: { scaleX: 0, opacity: 0, backgroundPositionX: 0 },
+                    hover: {
+                      scaleX: 1,
+                      opacity: 1,
+                      backgroundPositionX: [0, 20],
+                      transition: {
+                        scaleX: { duration: 0.3, ease: 'easeOut' },
+                        opacity: { duration: 0.2 },
+                        backgroundPositionX: {
+                          repeat: Infinity,
+                          ease: 'linear',
+                          duration: 0.2, // speed of the electricity wave
+                        },
+                      },
+                    },
+                  }}
+                />
+              </motion.li>
             ))}
           </ul>
           <div className="flex gap-4 items-center">

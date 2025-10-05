@@ -7,6 +7,27 @@
 
 @custom-variant dark (&:is(.dark *));
 
+.electric-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.electric-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 3px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'><polyline points='0,10 5,0 10,10 15,0 20,10 25,0 30,10 35,0 40,10 45,0 50,10 55,0 60,10 65,0 70,10 75,0 80,10 85,0 90,10 95,0 100,10' fill='none' stroke='%2300FFFF' stroke-width='2'/></svg>");
+  background-repeat: repeat-x;
+  background-size: 20px 10px; /* high frequency zigzag */
+  transform-origin: left;
+  transform: scaleX(0);
+  opacity: 0;
+}
+
+
 .inverted-radius {
   --r: 20px; /* the radius */
   --s: 30px; /* size of inner curve */
