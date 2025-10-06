@@ -20,7 +20,16 @@ const ComparisonSection = () => {
       id="nibras-comparison"
       className="flex w-screen min-h-screen items-center justify-center p-10"
     >
-      <div className="flex flex-col items-center p-6 w-full max-w-[1400px] rounded-2xl shadow-lg bg-[linear-gradient(16deg,#311824_1%,#0f0f1a_9%,#0e0f1c_36%,#20204a_70%,#000000_92%)]">
+      {/* Container with SVG background */}
+      <div className="relative flex flex-col items-center p-6 w-full max-w-[1400px] rounded-2xl shadow-lg overflow-hidden">
+        {/* SVG Decorative Background */}
+        <div
+          className="absolute inset-0 -z-10 bg-no-repeat bg-cover bg-center"
+          style={{
+            backgroundImage: 'url("/masks/comparison-mask.svg")',
+          }}
+        />
+
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 text-center">
           {t('insight-title-1')}
         </h1>
@@ -30,6 +39,7 @@ const ComparisonSection = () => {
         <p className="text-lg mb-10 text-center text-gray-300">
           {t('insight-paragraph')}
         </p>
+
         {/* Responsive Table */}
         <div className="overflow-x-auto w-full">
           <table className="w-full border-collapse rounded-xl overflow-hidden">

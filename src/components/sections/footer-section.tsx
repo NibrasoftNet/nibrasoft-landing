@@ -32,13 +32,22 @@ const FooterSection = () => {
   ];
 
   return (
-    <section className="flex w-screen justify-center bg-[linear-gradient(16deg,#311824_1%,#0f0f1a_9%,#0e0f1c_36%,#20204a_70%,#000000_92%)]">
-      <div className="flex flex-col size-full justify-center max-w-[1400px] p-10 gap-10">
+    <section className="relative flex w-screen justify-center overflow-hidden">
+      {/* Responsive SVG Background */}
+      <div
+        className="absolute inset-0 -z-10 bg-no-repeat bg-cover bg-center"
+        style={{
+          backgroundImage: 'url("/masks/footer-background.svg")',
+        }}
+      />
+
+      <div className="relative flex flex-col size-full justify-center max-w-[1400px] p-10 gap-10">
         <img
           src="/images/nibras-long-logo-image.png"
           alt="nibras-logo"
           className="w-72"
         />
+
         <div className="w-full gap-10 flex flex-col md:flex-row items-center justify-between">
           <h1 className="font-extrabold text-7xl text-white text-center w-1/2 md:text-start">
             {t('footer.title')}
@@ -55,15 +64,14 @@ const FooterSection = () => {
                 aria-label="Copy"
                 title="Copy"
                 size="icon-xs"
-                onClick={() => {
-                  console.log('copy to clipboard');
-                }}
+                onClick={() => console.log('copy to clipboard')}
               >
                 <ArrowRightIcon className="text-white size-6" />
               </InputGroupButton>
             </InputGroupAddon>
           </InputGroup>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {footerList.map((item) => (
             <div
