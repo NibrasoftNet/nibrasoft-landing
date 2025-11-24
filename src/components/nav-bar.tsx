@@ -92,9 +92,8 @@ const NavBar = () => {
     <>
       <nav
         dir="ltr"
-        className={`sticky flex items-center justify-center top-0 left-0 w-full z-50 transition-all duration-300 px-4 max-w-[1400px] ${
-          isScrolled ? 'shadow-md backdrop-blur-md py-2' : 'py-2'
-        }`}
+        className={`sticky flex items-center justify-center top-0 left-0 w-full z-50 transition-all duration-300 px-4 max-w-[1400px] ${isScrolled ? 'shadow-md backdrop-blur-md py-2' : 'py-2'
+          }`}
       >
         <div className="flex items-center justify-between w-full h-full p-4 max-w-[1400px] sticky top-0">
           <img
@@ -152,7 +151,7 @@ const NavBar = () => {
             </button>
             <button
               onClick={() => setOpenMenu((prev) => !prev)}
-              className="md:hidden uppercase rounded-full px-4 py-2 border-2 border-primary text-primary"
+              className="md:hidden uppercase rounded-full px-4 py-2 border-2 border-white text-white"
             >
               <MenuIcon className="w-6 h-6" />
             </button>
@@ -161,7 +160,7 @@ const NavBar = () => {
       </nav>
 
       {openMenu && (
-        <ul className="w-screen h-screen flex flex-col items-center justify-start gap-10 pt-10 bg-white">
+        <ul className="w-screen h-screen flex flex-col items-center justify-start gap-10 pt-10 bg-white z-50">
           {navLinks.map((link) => (
             <li
               key={link.name}

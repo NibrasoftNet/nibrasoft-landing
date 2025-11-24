@@ -49,7 +49,7 @@ const FooterSection = () => {
         />
 
         <div className="w-full gap-10 flex flex-col md:flex-row items-center justify-between">
-          <h1 className="font-extrabold text-7xl text-white text-center w-1/2 md:text-start">
+          <h1 className="font-extrabold text-7xl text-white text-center w-full md:w-1/2 md:text-start">
             {t('footer.title')}
           </h1>
           <InputGroup className="w-full md:w-1/2 h-12 bg-white">

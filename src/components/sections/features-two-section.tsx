@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Badge } from '../ui/badge';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 
 const features = [
   { key: 'uiux', color: 'bg-blue-500 text-white' },
@@ -25,15 +26,27 @@ const FeaturesTwo = () => {
   return (
     <section
       id="nibras-insights"
-      className="w-screen flex flex-col items-center bg-[#F2F1F6] p-0 md:p-10"
+      className="w-full flex flex-col items-center bg-[#F2F1F6] p-0 md:p-10 overflow-hidden"
     >
-      <h1 className="text-white font-extrabold text-7xl capitalize">
+      <motion.h1
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="text-white font-extrabold text-5xl md:text-7xl capitalize mb-10 text-center"
+      >
         {t('hero-title-3')}
-      </h1>
-      <div className="rounded-2xl shadow-lg bg-gradient-to-br from-white via-white to-blue-100 flex flex-col md:flex-row items-center max-w-[1400px] w-full p-10">
+      </motion.h1>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="rounded-2xl shadow-lg bg-gradient-to-br from-white via-white to-blue-100 flex flex-col md:flex-row items-center max-w-[1400px] w-full p-6 md:p-10"
+      >
         {/* Text & Features */}
         <div className="flex flex-col items-center md:items-start gap-4 w-full">
-          <h2 className="text-blue-500 font-bold text-5xl text-center md:text-left">
+          <h2 className="text-blue-500 font-bold text-3xl md:text-5xl text-center md:text-left">
             {t('featuresTwo.title')}
           </h2>
 
@@ -42,11 +55,10 @@ const FeaturesTwo = () => {
             {features.map((feature, index) => (
               <Badge
                 key={feature.key}
-                className={`text-lg rounded-full cursor-pointer transition-all duration-300 ${
-                  index === activeIndex
-                    ? feature.color
-                    : 'bg-gray-200 text-gray-600'
-                }`}
+                className={`text-base md:text-lg rounded-full cursor-pointer transition-all duration-300 ${index === activeIndex
+                  ? feature.color
+                  : 'bg-gray-200 text-gray-600'
+                  }`}
                 onClick={() => setActiveIndex(index)}
               >
                 {t(`featuresTwo.${feature.key}.title`)}
@@ -55,27 +67,32 @@ const FeaturesTwo = () => {
           </ul>
 
           {/* Active Feature Description */}
-          <p className="max-w-md text-lg font-semibold mt-4 text-center md:text-left text-gray-700">
+          <motion.p
+            key={activeIndex}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3 }}
+            className="max-w-md text-base md:text-lg font-semibold mt-4 text-center md:text-left text-gray-700"
+          >
             {t(`featuresTwo.${features[activeIndex].key}.description`)}
-          </p>
+          </motion.p>
         </div>
 
         {/* Image */}
         <img
           src="/images/gears-image.png"
           alt="feature two"
-          className="w-[550px] mt-6 md:mt-0"
+          className="w-full md:w-[550px] mt-6 md:mt-0 object-contain"
         />
-      </div>
+      </motion.div>
 
       {/* Bottom Bars */}
-      <ul className="flex gap-4 mt-4">
+      <ul className="flex gap-4 mt-8">
         {features.map((_, index) => (
           <li
             key={index}
-            className={`w-16 h-2 rounded-full transition-all duration-300 ${
-              index === activeIndex ? 'bg-blue-500' : 'bg-gray-300'
-            }`}
+            className={`w-12 md:w-16 h-2 rounded-full transition-all duration-300 ${index === activeIndex ? 'bg-blue-500' : 'bg-gray-300'
+              }`}
           />
         ))}
       </ul>
