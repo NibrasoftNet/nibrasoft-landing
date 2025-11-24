@@ -92,8 +92,9 @@ const NavBar = () => {
     <>
       <nav
         dir="ltr"
-        className={`sticky flex items-center justify-center top-0 left-0 w-full z-50 transition-all duration-300 px-4 max-w-[1400px] ${isScrolled ? 'shadow-md backdrop-blur-md py-2' : 'py-2'
-          }`}
+        className={`sticky flex items-center justify-center top-0 left-0 w-full z-50 transition-all duration-300 px-4 max-w-[1400px] ${
+          isScrolled ? 'shadow-md backdrop-blur-md py-2' : 'py-2'
+        }`}
       >
         <div className="flex items-center justify-between w-full h-full p-4 max-w-[1400px] sticky top-0">
           <img

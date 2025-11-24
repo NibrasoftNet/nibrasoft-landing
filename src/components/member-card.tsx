@@ -1,5 +1,5 @@
 import { CircleXIcon, PlusIcon } from 'lucide-react';
-import type { MemberProps } from '@/components/sections/our-team-section';
+import type { MemberProps } from './sections/our-team-section';
 import { AnimatePresence, motion } from 'motion/react';
 import { useId } from 'react';
 import { useTranslation } from 'react-i18next';

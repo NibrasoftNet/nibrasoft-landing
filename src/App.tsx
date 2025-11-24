@@ -2,9 +2,10 @@ import { Suspense } from 'react';
 import i18next from 'i18next';
 import Loading from './components/loading';
 import HeroServiceSection from './components/sections/hero-service-section';
-import FeaturesSection from '@/components/sections/features-section';
-import FeaturesTwoSection from '@/components/sections/features-two-section';
+import FeaturesSection from './components/sections/features-section';
+import FeaturesTwoSection from './components/sections/features-two-section';
 import FooterSection from './components/sections/footer-section';
+import OurTeamSection from './components/sections/our-team-section';
 
 function App() {
   const currentLanguage = i18next.language;
@@ -15,6 +16,7 @@ function App() {
         <HeroServiceSection />
         <FeaturesSection />
         <FeaturesTwoSection />
+        <OurTeamSection />
         <FooterSection />
       </main>
     </Suspense>

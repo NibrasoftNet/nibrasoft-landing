@@ -56,7 +56,6 @@ const FooterSection = () => {
             <InputGroupInput
               className="!text-lg"
               placeholder={t('footer.emailPlaceholder')}
-              readOnly
             />
             <InputGroupAddon align="inline-end">
               <InputGroupButton

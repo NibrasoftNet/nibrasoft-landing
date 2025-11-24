@@ -66,11 +66,7 @@ const HeroServiceSection = () => {
   // Update positions on resize
   useEffect(() => {
     const updatePositions = () => {
-      if (
-        containerRef.current &&
-        startLogoRef.current &&
-        endLogoRef.current
-      ) {
+      if (containerRef.current && startLogoRef.current && endLogoRef.current) {
         const containerRect = containerRef.current.getBoundingClientRect();
         const startRect = startLogoRef.current.getBoundingClientRect();
         const endRect = endLogoRef.current.getBoundingClientRect();
@@ -118,11 +114,13 @@ const HeroServiceSection = () => {
     return Math.sin(v * Math.PI) * -100; // -100px arc to the left
   });
 
-  const finalX = useTransform([x, arcOffset], (values: number[]) => values[0] + values[1]);
-
+  const finalX = useTransform(
+    [x, arcOffset],
+    (values: number[]) => values[0] + values[1]
+  );
 
   return (
-    <div ref={containerRef} className="relative w-full sticky bottom-0 -z-10">
+    <div ref={containerRef} className="relative w-full sticky top-0">
       {/* Animated Logo */}
       <motion.img
         src="/images/nibras-logo-only.png"
@@ -184,7 +182,7 @@ const HeroServiceSection = () => {
               alt="Nibras-logo"
               className="absolute -bottom-10 -left-10 md:-bottom-20 md:-left-20 mt-2 w-[100px] md:w-[150px] object-contain z-0"
               animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
             />
           </div>
         </div>
