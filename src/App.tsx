@@ -6,6 +6,7 @@ import FeaturesSection from './components/sections/features-section';
 import FeaturesTwoSection from './components/sections/features-two-section';
 import FooterSection from './components/sections/footer-section';
 import OurTeamSection from './components/sections/our-team-section';
+import ComparisonSection from './components/sections/comparison-section';
 
 function App() {
   const currentLanguage = i18next.language;
@@ -16,6 +17,7 @@ function App() {
         <HeroServiceSection />
         <FeaturesSection />
         <FeaturesTwoSection />
+        <ComparisonSection />
         <OurTeamSection />
         <FooterSection />
       </main>
